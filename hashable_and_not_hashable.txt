@@ -1,0 +1,16 @@
+why we need hashable and not hashable types in python??
+
+
+The central idea : 
+
+Dictionary key must stay stable
+            ↓
+Python needs a stable hash
+            ↓
+Every part of the key must be hashable
+
+
+eg : 
+("Sanjay", 25)        # Hashable: all parts are fixed
+("Sanjay", (80, 90))  # Hashable: nested tuple is also fixed
+("Sanjay", [80, 90])  # Not hashable: the list can change
