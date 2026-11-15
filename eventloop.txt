@@ -1,0 +1,22 @@
+The event loop continually performs a cycle similar to:
+
+Is a task ready?
+    ↓
+Run that task
+    ↓
+Task reaches await
+    ↓
+Mark task as waiting
+    ↓
+Run another ready task
+    ↓
+An awaited operation finishes
+    ↓
+Mark its task as ready again
+
+
+One thread
+└── Event loop
+    ├── Request A
+    ├── Request B
+    └── Request C
