@@ -1,0 +1,13 @@
+asynchronous server gateway interface
+ASGIDefines the interface Uvicorn and your application use to exchange request and response information.
+
+
+Client ←— HTTP over the network —→ Uvicorn
+                                     ↕ ASGI interface
+                                  FastAPI app
+                                     ↕
+                               Endpoint function
+
+
+uvicorn main:app
+This tells Uvicorn to import the object named app from main.py and serve it. Uvicorn runs the event loop that supports async request handling

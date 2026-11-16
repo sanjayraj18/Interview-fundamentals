@@ -1,0 +1,20 @@
+Response_model defines the expected structure of an endpoint response.
+
+For example, incoming data may include a password, but the response should exclude it:
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class UserCreate(BaseModel):
+    name: str
+    email: str
+    password: str
+
+class UserPublic(BaseModel):
+    name: str
+    email: str
+
+@app.post("/users", response_model=UserPublic)
+def create_user(user: UserCreate):
+    return user.model_dump()
