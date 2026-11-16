@@ -1,0 +1,2 @@
+Choose middleware when you need to wrap HTTP processing; 
+choose a dependency when you need to provide or check something for endpoint execution.

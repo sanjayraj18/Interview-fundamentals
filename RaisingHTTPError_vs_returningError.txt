@@ -1,0 +1,31 @@
+Raising HTTPException stop excecuting and produce an HTTP error response.
+Returning a error dictionary simply returns data - usually with status code 200
+
+@app.get("/users/{user_id}")
+def get_user(user_id: int):
+    user = find_user(user_id)
+
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    return user
+
+HTTP/1.1 404 Not Found
+{"detail": "User not found"}
+
+
+//case
+if user is None:
+    return {"error": "User not found"}
+
+HTTP/1.1 200 OK
+{"error": "User not found"}
+
+
+
+| **400** | Bad Request           | The request has a client-side problem, such as malformed syntax. | A malformed HTTP request. |
+| **401** | Unauthorized          | Valid authentication credentials are missing. | Missing, invalid, or expired access token. |
+| **403** | Forbidden             | The server refuses permission to perform the action. | A logged-in regular user tries to access an admin endpoint. |
+| **404** | Not Found             | The requested route or resource cannot be found. | `/users/999` when user 999 doesn’t exist. |
+| **422** | Unprocessable Content | The data’s format is understood, but its values cannot be processed. | `"age": "hello"` when an integer is required. |
+| **500** | Internal Server Error | An unexpected server-side problem prevents completion. | A bug causes an unhandled exception. |
