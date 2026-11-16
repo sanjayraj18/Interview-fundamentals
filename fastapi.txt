@@ -1,0 +1,23 @@
+FastApi is the python framework for building webapis, it make python function to callable over http. so a website can use them
+
+An ordinary Python function runs when other Python code calls it:
+def greet(name: str):
+    return {"message": f"Hello, {name}"}
+
+greet("Sanjay")
+
+
+With FastAPI, you connect a function to a URL:
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/greet")
+def greet(name: str):
+    return {"message": f"Hello, {name}"}
+
+
+IMPORTANT : 
+Ordinary function does not enforce type hints at the runtime, a parameter annotaated age : int, can still receive string in a normal function call.
+FastApi uses that annotation to parse and validate incoming HTTP input before calling the function

@@ -1,0 +1,28 @@
+FastAPI builds on Starlette for the web machinery and uses pydantic for the data machinery. They are complementary libraries
+
+Library	       Responsibility
+Starlette	  Web fundamentals: routing, requests, responses, middleware, WebSockets, and asynchronous request handling.
+Pydantic	  Data models: parsing, validation, serialization, and generating JSON schemas from Python type annotations.
+FastAPI	      Connects your function signatures and data models to HTTP endpoints, adding automatic input handling, dependency injection, and API documentation.
+
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class Product(BaseModel):
+    name: str
+    price: float
+
+@app.post("/products")
+def create_product(product: Product):
+    return {"name": product.name, "price": product.price}
+
+
+When someone sends POST /products with a JSON body:
+1. Starlette provides the underlying request and routing infrastructure.
+2. FastAPI inspects the function signature and recognizes that the body should become a Product.
+3. Pydantic validates the data and creates the Product object. For example, "price": "12.50" can be converted into a float; "price": "hello" fails validation.
+4. FastAPI calls your function with the validated object, or returns a validation error if the input is invalid.
+5. FastAPI prepares the result, using Starlette’s response machinery to send it back

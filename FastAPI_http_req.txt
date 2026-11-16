@@ -1,0 +1,23 @@
+FastAPI coordinates validation and calling your function; Pydantic performs the data validation.
+
+Client sends HTTP request
+         ↓
+ASGI server (such as Uvicorn) receives it
+         ↓
+Middleware processes the request
+         ↓
+Starlette/FastAPI routing matches the URL + HTTP method
+         ↓
+FastAPI extracts inputs and resolves dependencies
+         ↓
+Pydantic parses and validates the input data
+         ↓
+FastAPI calls your endpoint function
+         ↓
+Your function runs the application logic and returns a value
+         ↓
+FastAPI prepares the response
+         ↓
+Middleware processes the outgoing response
+         ↓
+Server sends the HTTP response to the client
