@@ -1,2 +1,10 @@
 Choose middleware when you need to wrap HTTP processing; 
 choose a dependency when you need to provide or check something for endpoint execution.
+
+| Middleware                            | Dependency 
+
+| Request logging and timing            | Providing a database session |
+| Adding common response headers        | Getting the authenticated user |
+| CORS handling                         | Checking endpoint-specific permissions |
+| Assigning request IDs                 | Validating shared endpoint inputs |
+| Wraps request and response processing | Supplies values or checks requirements before the endpoint runs |
