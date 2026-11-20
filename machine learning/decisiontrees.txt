@@ -1,0 +1,44 @@
+Desicion Trees are nothing but the gaint sturcture of the nested if-else condition
+
+Mathematically speaking,  Desicion tress use hyperplans which run parallely to any one of the axes to cut your ordinate sysytem into hypercuboids
+
+
+How to decide which column should be considered as root node?? 
+    -> based on Information Gain
+    -> A decision tree split data to reduce entropy as much as possible at each step. A good split takes high entropy for the
+parent node and the less entropy for the child node
+
+
+How to select subsequent decision nodes??
+
+
+How to decide splitting criteria in case of numerical columns??? 
+    -> first we need to split at very random point, then we need to calcute the error (mean of the split line , mean of the whole other) and calcuate the error
+    -> at one point the error will be minimum, at that point we need to have our first split, then we need to repeat the process recursively
+
+
+Entropy : The measure of disorderness / the measure of purity or impurity
+Observation : 
+More the uncertainity more the entropy is
+for 2 class problem the min entropy is 0 and the max_entropy is 1
+for more than 2 class problem the min-entropy is 0 and the max_entropy is more than 1
+        E = -p_ylog(p_y) - p_xlog(p_x)
+
+
+Information Gain : Metric. used in Desicion Trees
+Information Gain is based on the decrease in the data-set split on an attribute. Contructing the Desicion Tree is all about finding the
+attribute which returns the Highest Information Gain
+        IG = E(parent) - {weighted_avg} * E(children)
+if Entropy  = 0 there wont be any splitting, it will be considered as the leaf node
+
+
+Gini Impurity : it is also similar to entropy, but the formula is different  G.I = 1 - (p_y^2 + p_x^2)
+why we need Gini Impurity then ??? , Since entrpy have a log calculation , it will be slow in large dataset, but the GI is fast over there
+we need to do HYPERPARAMETER TUNING to find which is best for the specific dataset (whether GI or Entropy)
+
+Hyperparameters to tune : 
+    Criteria - entropy or Gini 
+    split  - best or random
+    min sample split - number
+    min sample leaf - number
+    max features - number 

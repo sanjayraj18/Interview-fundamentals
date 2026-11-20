@@ -1,0 +1,5 @@
+SVM is the extension of logistic regression, over there we will try to optimize the dividing line
+How ???
+  -> we will try to maximize the w^tx ka distance, so that in future if our model get exposed to new data it will perform good
+
+eq of hyperplane -> [W^t + w0 = 0] -> general form
