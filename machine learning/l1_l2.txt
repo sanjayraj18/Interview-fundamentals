@@ -1,0 +1,21 @@
+Regression help to prevent model from becoming too dependent on training data by discouraging very large feature coefficients.
+
+L1 regularization : Lasso
+L1 penalty = λ × (|w₁| + |w₂| + |w₃| + ...)
+
+Choose L1 when
+- You have many features.
+- You believe only some features are useful.
+- You want automatic feature selection.
+- You want a simpler model using fewer features.
+
+L2 regularization: Ridge 
+L2 penalty = λ × (w₁² + w₂² + w₃² + ...)
+
+L2 usually makes coefficients smaller without making them exactly zero
+
+Choose L2 when
+- Most features probably contain useful information.
+- You want stable predictions.
+- Features are correlated.
+- You want to reduce large coefficients without removing features.
