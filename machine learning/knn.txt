@@ -1,0 +1,13 @@
+K Nearst Neighbor : 
+    KNN is the supervised learning algo. It meansures the Eucledian distance to find the K-closest Neighbor points in the training set.
+    For classification is uses Majority vote and for regression it uses average of the Neighbor values
+    knn is a lazy learning technique
+
+Now, How to find the K value >????
+Two types : Heurisitc approach -> sqrt(n) -> but it is even, we need to convert it to odd for classification problems
+Experimental Values ->
+
+Limitations:
+In large dataset
+Curse of dimentionality -> if the dimentionality is high (400), we cant able to reliable proceed with the distance that we are calcualting
+with the Outliers in the data, KNN wont perform well

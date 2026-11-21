@@ -1,0 +1,12 @@
+TP -> correcly predicted
+TN -> correctly predicted
+FP -> actually it is negative but predicted as positive
+FN -> actually it is positive but predicted as negative (dangerous)
+
+Accuracy -> Out of all predictions, how many were correct? = (TP+TN / TP+TN+FP+FN)
+Precision -> When the model predicted positive, how often was it correct? = (TP/TP+FP)
+Recall -> Out of all the actual positive cases, how many did the model find? = (TP/FN + TP)
+
+F1 score = 2*Precision*Recall / Precision + Recall
+and the most important thing is F1 score ignores True Negative and it also has no differentate between Precision and Recall 
+if P= 0.8 and R = 0.1 && R = 0.8 and P=0.1 both gives the same F1 score
