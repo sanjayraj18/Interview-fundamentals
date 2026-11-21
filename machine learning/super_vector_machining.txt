@@ -3,3 +3,20 @@ How ???
   -> we will try to maximize the w^tx ka distance, so that in future if our model get exposed to new data it will perform good
 
 eq of hyperplane -> [W^t + w0 = 0] -> general form
+
+How to figure out whether the point is positve or negative???
+  if w.u + b > 0 -> then that point lies in the positive side , else negative side
+
+eq of hyperplane = w^t.x + b = 0
+there will be two line on the either side 
+  w^t.x +b = 1 and w^t.x +b = -1
+
+we will comvert the above two line eq into single eq, by multiplying y = 1. and y = -1 on both the eq to arrive for the constrain
+    y.(w^t.x + b) >=1   -> the constrain for the two opposite planes, we need to calculate the d value for this constrain
+    our aim is to maximize the d value , so that we can arrive at the correct hyperplane
+
+so now we gonna derive the expression for the "d":
+ d = 2/ |w|
+
+long story short : 
+we need to find the value of w*, b* such that those value will maximize the 2/|w| given condition y.(w.x + b) >=1

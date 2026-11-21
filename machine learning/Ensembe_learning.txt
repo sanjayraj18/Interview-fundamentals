@@ -1,0 +1,28 @@
+Ensembe learning is nothing but, the model will learn from differen different base models
+    two things : use different algo , or use same algo but different data
+
+Techniques : 
+    Voting
+    Bagging -> Random Froest
+    Boosting -> AdaBoost, Gradient Boost, XGBoost
+    Stacking
+
+Disadvantage : 
+    since we are training more models, the computational complexity increases
+Advantages : 
+    Improvement in performance
+    goal is to low bias and low variance -> it can be achieved
+
+
+Random Forest :
+Bagging -> we will train 100 models with the Decision tree, on three ways : row sampling, column, sampling, or mixture
+    then we will get 100 models which are all trained in the Decision tree, if a random query point comes, we will pass
+    into all the models and classify based on the majority result, 57 says 1 and 43 says 0 -> then 1 is the result
+Random Forest algo uses Bagging concept
+and more importantly it is "Low Bias and Low Variance algo"
+
+what is the difference between RF and Bagging -> twist???
+In bagging we can use diff algos, such that all the base estimators are KNN, DT, SVM -> it is a general Technique
+but in Random Forest , all the base estimators are Decision Trees only
+then one more thing , Bagging uses -> Tree level column sampling but 
+Random forest uses -> Node level column Sampling
