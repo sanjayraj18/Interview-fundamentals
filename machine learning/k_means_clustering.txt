@@ -1,0 +1,16 @@
+kmeans -> centroid based clustering algo 
+        It is used in High Dimensional data
+
+Decide Clusters -> Init Clusters -> Assign Cluster(eucleidian distance) -> Move centroids -> Finish
+
+How to decide the number of Clusters???
+    using ELBOW METHOD
+
+
+DBSCAN Clustering algo: -> Density based clustering algo
+drawbakcs of Kmeans clustering :
+    we need to specify the clusters
+    very sensitive to outliers
+    It wont perform good with the Non-spherical kind of data
+
+Epsilon and the minPoints is used to find whether the point is in sparse area or dense area, and these two are the hyperparameters

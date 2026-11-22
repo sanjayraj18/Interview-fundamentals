@@ -1,0 +1,7 @@
+After standadization
+the data Mean = 0, and the S.D = 1
+
+in standadization : we will do , Mean centering and scaling by the factor of S.d
+
+when to use standadization : 
+    when we are using Kmeans or Knn, where the algo calculating Euclidean Distance

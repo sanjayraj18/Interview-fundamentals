@@ -1,0 +1,9 @@
+Normalization is a techinque often applied as the part of the data preparation in machine learning.
+The goal of Normalization is to change the values of numeric columns in the dataset to use a common scale, without distorting 
+differnce in the range of values or losing information
+
+Techinques:
+    MinmaxScaling
+    Mean Normalization
+    Robust Scaling
+    Max absolute
