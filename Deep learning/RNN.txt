@@ -7,3 +7,8 @@ Problems that why we cant use ANN:
 
 
 RNN -> it is the type of sequential model to work on sequential data
+
+The solo difference or the primary difference between the ANN and the RNN is the concept of "STATE" -> which means the hidden layers also have its own weight
+RNN is bit problematic once the length of the sentence is more than 30, it will forget the starting point and the relation between the starting and
+the ending last word
+Another problem with the RNN is that, it cant able to clearly separate and maintain the Long term context and the Short term Context in its single STATE

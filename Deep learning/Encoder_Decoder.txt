@@ -1,3 +1,6 @@
 High level Overview : 
 
 Input text -> Encoder -> Context Vector -> Decoder -> Output
+
+Encoder : It is made up of LSTM cells inside
+Decoder : It is also made up of LSTM
