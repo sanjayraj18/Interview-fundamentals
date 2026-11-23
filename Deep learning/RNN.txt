@@ -1,0 +1,9 @@
+Problems that why we cant use ANN:
+    text input is varying size
+    so if we try to add the Zero padding to handle the varying text input , we are adding unnecessary complecations
+    there will the problem in the prediction
+    we are totally disregaring the sequential information (we are giviing the whole sentence words in a single time)
+    ANN by design doesnt have in that memory to retain what comes first and second
+
+
+RNN -> it is the type of sequential model to work on sequential data

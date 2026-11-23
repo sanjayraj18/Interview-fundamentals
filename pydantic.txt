@@ -1,0 +1,59 @@
+Pydantic solves the problem of untrusted runtime data entering a python program
+
+Type Hints vs pydantic:
+    Help developers and static tools before or during development. -> type Hints
+    Validates actual values when the program runs.
+
+what is BaseModel ???
+it is the parent class that gives a pydantic model its validation , conversion, error reporting, serialization
+
+
+Complex behavior and custom domain logic
+    → regular class
+
+Simple trusted internal data
+    → dataclass
+
+Untrusted external data requiring validation, conversion, serialization, or schemas
+    → Pydantic BaseModel
+
+
+Type coercion means converting an input from one type into another compatible type.
+
+Pydantic model’s full lifecycle:
+    Raw input
+        ↓ model_validate()
+    Validated model
+        ↓ model_dump() or model_dump_json()
+    Output data
+
+
+extra = "ignore", silently ignores the extra field from the input
+from pydantic import BaseModel, ConfigDict
+class User(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    name: str
+
+user = User.model_validate({
+    "name": "Asha",
+    "age": 25,
+})
+
+print(user)
+# name='Asha'
+
+print(user.model_dump())
+# {'name': 'Asha'}
+
+
+extra = "forbid" , Unexpected fields cause a validation error
+
+
+model_validate()
+Raw data → Pydantic object
+
+model_dump()
+Pydantic object → Python dictionary
+
+model_dump_json()
+Pydantic object → JSON string

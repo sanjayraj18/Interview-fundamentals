@@ -1,0 +1,21 @@
+History of Seq2Seq models:
+
+these type of models came to solve the problem of asynchoronus input and output , eg : chatbot
+
+steps or stages : 
+Encoder , decoder -> Attention -> Transformer -> Transfer learning -> LLMs
+
+Overview drawbacks:
+Encoder , decoder : 
+    A potential issue with the architecture is neural network needs to be able to compress all the necessary information of the source sentence,
+    into the fixed length vector
+
+Attention:
+    for each decoder timestamp we are calculating the separte context vector, the computational complexity is getting increased
+    it is a sequential process, by which each output word needs to calculate the similarity score with each input encoder block
+
+Transformer:
+    It is very difficult and it will consume more resources to train it from stratch
+
+
+Transfer learning (definition) : technique in which knowledge learnned from a task is reused in order to boost the performace of the related task

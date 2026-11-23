@@ -1,0 +1,3 @@
+High level Overview : 
+
+Input text -> Encoder -> Context Vector -> Decoder -> Output
