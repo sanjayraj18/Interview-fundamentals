@@ -1,0 +1,16 @@
+In transformers we wont use LSTMs, Instead we use "Self Attention"
+
+Advantages :
+    Scalability
+    Tranfer Learning
+    Flexible Architecture, i.e -> Encoder Only - BERT, Decoder only - GPT
+    Ecosystem
+
+Before understanding transformers we need to understand what is self attention means,
+     The first and the foremost step is to convert the word into vectors -> there are so many ways like
+        One hot encoding
+        Tf-Idf
+        BOW 
+    but, we will use Word Embeddings because it will capture the semantic meaning of the word, But the problem is will capture the "Average Meaning"
+Simply in a line, Word Embeddings capture the Static Embeddings while Self Attention captures the Contextual Embeddings
+
