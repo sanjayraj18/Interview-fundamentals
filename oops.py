@@ -2,6 +2,13 @@
 # object, instance
 # Instance variable, class variable
 
+# Encapulation -> bank example
+# Inheritance -> Animal example
+# Overriding -> Animal speak example
+# Polymorphism -> Payment example
+# Abstraction -> Coffee machine example
+
+
 
 # Encapsulation - Encapsulation means keeping an object’s data and the operations controlling that data together.
 # before eg : bank balance example

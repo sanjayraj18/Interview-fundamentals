@@ -1,0 +1,38 @@
+Finetuning Hypeparameters :
+    Number of Hidden layers
+    neuron per layers
+    learning rate
+    optimizer
+    batch size
+    Activation function
+
+Problems we need to address:
+    Vanishing / eploding gradients
+    Not enough data
+    slow training
+    Overfitting
+
+Overfitting : 
+    Dropout layers
+    Regularization (l1 and l2)
+    Early Stopping
+
+Normalization : 
+    Normalized Input
+    Batch Normalization
+    Normalizing Activation
+
+Vanishing Gradients:
+    Activation function 
+    Weight Initialization
+
+
+Early stopping : It is technique that we are following to find the best parameter epoch, without training the whole iterations , helps to reduce Overfitting
+how to meeasure ??? if the accuracy decrease or the loss increase
+
+what is the need for the Normalization ???
+If there is an unnormalized data , then the loss function will be non symmetrical, whereas if there is a normalized data , then the loss function
+will be symmetrical and it will be easy for a gradient decent to converge
+
+Standarization = xi - mean / s.d
+Normalization = xi - xmin / xmax - xmin
